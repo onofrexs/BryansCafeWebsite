@@ -1,0 +1,715 @@
+/* Estilo do Cabeçalho e Navegação */
+header {
+    background-color: #375b87; /* Fundo marrom para o cabeçalho */
+    color: #1ccd12;
+    padding: 1rem 2rem; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o cabeçalho */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    color: #eff4f0;
+    text-decoration: none;
+    font-family: 'Lora', serif; /* Fonte estilizada para o logo */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Organiza os itens do menu horizontalmente */
+    gap: 1.5rem; /* Espaçamento entre os links */
+    margin: 0; /* Remove qualquer margem padrão */
+}
+
+nav ul li {
+    margin: 0; /* Remove margem adicional dos itens da lista */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #795548; /* Cor mais clara ao passar o mouse */
+    border-radius: 5px;
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+/* Seção de Destaque para "About Us" e "Our History" */
+.highlight-section {
+    display: flex;
+    align-items: center;
+    background-color: #00a99d; /* Cor verde para o fundo */
+    padding: 2rem;
+    color: #fff;
+    gap: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem; /* Espaço entre as seções */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a seção */
+}
+
+.highlight-image {
+    flex: 1;
+    position: relative;
+}
+
+.highlight-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+}
+
+/* Borda colorida ao lado da imagem */
+/* Definir tamanho fixo para as imagens das seções "About Us" e "History" */
+.highlight-image img {
+    width: 400px;
+    height: 334px;
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na imagem */
+}
+
+
+.highlight-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.highlight-content h2 {
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-content h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.highlight-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Estilo do botão na seção de destaque */
+.highlight-button {
+    background-color: #2121c0; /* Marrom escuro */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.highlight-button:hover {
+    background-color: #05edf1;
+    transform: scale(1.05);
+}
+
+/* Responsividade para a seção "About Us" e "Our History" */
+@media (max-width: 768px) {
+    .highlight-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .highlight-image::before {
+        display: none; /* Remove a borda vertical em dispositivos menores */
+    }
+
+    .highlight-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .highlight-content h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Estilo para a mensagem de confirmação do formulário */
+.confirmation-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #5D4037;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+/* Animação para aparecer e desaparecer */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Estilo da página Privacy Policy */
+.privacy-policy .banner {
+    background-color: #d5b17a; /* Fundo marrom para o banner */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.privacy-policy .banner h1 {
+    font-size: 2.5rem;
+    font-family: 'Lora', serif;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-policy .banner p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Conteúdo da política de privacidade */
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f5f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-content h2 {
+    color: #375d41;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.policy-content p {
+    margin-bottom: 1.5rem;
+}
+
+.policy-content strong {
+    color: #4c7036;
+}
+/* Banner na Página Inicial */
+
+/* Seção About e History com layout lado a lado */
+.about-section, .history-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto; /* Centraliza a seção na página */
+    background-color: #f9f5f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem com tamanho fixo para About e History */
+.about-section .about-image img,
+.history-section .history-image img {
+    width: 263px;
+    height: 234px; /* Para About */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-section .history-image img {
+    height: 230px; /* Para History */
+}
+
+/* Conteúdo das seções About e History */
+.about-content, .history-content {
+    flex: 1;
+}
+
+.about-content h2, .history-content h2 {
+    font-size: 1.8rem;
+    font-family: 'Lora', serif;
+    color: #375b87;
+    margin-bottom: 0.5rem;
+}
+
+.about-content p, .history-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+/* Rodapé */
+footer {
+    background-color: #375b87;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #1ccd12;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .about-section, .history-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section .about-image img,
+    .history-section .history-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Banner ocupando toda a largura da tela */
+.banner {
+    background-image: url('DALL·E\ 2024-11-03\ 13.57.03\ -\ A\ cozy\ German-style\ café\ in\ a\ traditional\ village\ setting.\ The\ café\ has\ a\ rustic\ charm\,\ featuring\ wooden\ beams\,\ flower\ boxes\ with\ colorful\ flowers\ on\ .webp'); /* Insira o caminho da imagem do banner */
+    background-size: cover; /* Faz com que a imagem cubra toda a área do banner */
+    background-position: center; /* Centraliza a imagem de fundo */
+    width: 100vw; /* Usa toda a largura da viewport */
+    max-width: none; /* Remove restrições de largura máxima */
+    height: 234px; /* Altura do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 1rem;
+    margin-left: calc((100vw - 100%) / 2); /* Centraliza o banner sem bordas laterais */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Sobreposição escura */
+    z-index: 1; /* Mantém a sobreposição atrás do conteúdo */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2; /* Coloca o texto sobre a sobreposição */
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Lora', serif;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #1ccd12;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.banner-button:hover {
+    background-color: #149a0e;
+    transform: scale(1.05);
+}
+
+/* Responsividade para o banner */
+@media (max-width: 768px) {
+    .banner {
+        height: 180px; /* Reduz a altura em dispositivos menores */
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para o conteúdo extra na seção Our History */
+.extra-content {
+    display: none; /* Inicialmente oculto */
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Já existem estilos para o botão highlight-button */
+.highlight-button {
+    background-color: #2121c0; /* Cor personalizada */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: dashed;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.highlight-button:hover {
+    background-color: #05edf1;
+    transform: scale(1.05);
+}
+
+/* Estilo para o título principal */
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #375b87;
+}
+
+/* Estilo das seções de menu */
+.menu-section {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    color: #375b87;
+    margin-bottom: 1rem;
+}
+
+/* Layout dos cards de menu */
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Estilo de cada card */
+.menu-card {
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.card-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #375b87;
+    margin: 0.5rem 0;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0 1rem 0;
+}
+
+/* Ícone de tamanho na seção de bebidas */
+.size-icon {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Estilo do botão de pedido */
+.order-btn {
+    display: inline-block;
+    background-color: #375b87;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+
+.order-btn:hover {
+    background-color: #1ccd12;
+}
+
+/* Estilo básico para o título da página e navegação */
+header {
+    background-color: #375b87;
+    color: #1ccd12;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    color: #eff4f0;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #795548;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .menu-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .menu-section h2 {
+        font-size: 1.75rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #375b87;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #1ccd12;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo geral para o título principal */
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #375b87;
+}
+
+/* Estilo da seção do formulário de contato */
+.contact-form-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    color: #375b87;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.contact-form-section form input,
+.contact-form-section form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form-section form input:focus,
+.contact-form-section form textarea:focus {
+    outline: none;
+    border-color: #375b87;
+}
+
+.submit-btn {
+    background-color: #375b87;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #1ccd12;
+}
+
+/* Estilo da seção das filiais */
+.branches-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.branches-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    color: #375b87;
+    margin-bottom: 1rem;
+}
+
+.branch {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.branch h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    color: #375b87;
+    margin-top: 0;
+}
+
+.branch p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #375b87;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.map-link:hover {
+    color: #1ccd12;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-form-section,
+    .branches-section {
+        padding: 1rem;
+    }
+
+    .branch {
+        padding: 1rem;
+    }
+}
